@@ -1,7 +1,22 @@
 {
     "routes": [
       {
-        "route": "/node_modules*"
+        "route": "/node_modules/*"
       }
-    ]
+    ],
+    "responseOverrides": {
+        "400": {
+          "rewrite": "/invalid-invitation-error.html"
+        },
+        "401": {
+          "redirect": "/login",
+          "statusCode": 302
+        },
+        "403": {
+          "rewrite": "/custom-forbidden-page.html"
+        },
+        "404": {
+          "rewrite": "/404.html"
+        }
+      }
 }
