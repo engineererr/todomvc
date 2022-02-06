@@ -1,14 +1,8 @@
 {
   "routes": [
     {
-      "route": "/js*"
-    },
-    {
-        "route": "/node_modules*"
-      },
-      {
-        "route": "/js*"
-      }
+      "route": "*"
+    }
   ],
   "responseOverrides": {
     "400": {
